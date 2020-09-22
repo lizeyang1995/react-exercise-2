@@ -40,3 +40,9 @@ $base-margin: 20px;
 .model {
   padding-bottom: 20px;
 }
+
+.phone-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
