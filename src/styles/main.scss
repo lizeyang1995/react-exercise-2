@@ -48,3 +48,8 @@ button {
   padding: 5px 10px;
   background-color: $support-blue;
 }
+
+article:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
