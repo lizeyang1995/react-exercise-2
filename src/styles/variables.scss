@@ -28,11 +28,16 @@ $base-margin: 20px;
   background-color: $support-blue;
 }
 
-.iphone-part {
+.iphone-part, .huawei-part {
   padding: 20px;
 }
 
 .iphone-part article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.huawei-part article {
   display: flex;
   justify-content: space-between;
 }
