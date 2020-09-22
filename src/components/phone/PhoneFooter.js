@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import AddPhone from '../AddPhone';
+import PhonePrice from '../PhonePrice';
 
 class PhoneFooter extends React.Component {
   constructor(props) {
@@ -10,8 +12,8 @@ class PhoneFooter extends React.Component {
   render() {
     return (
       <section className="phone-footer">
-        <p>{this.props.price}</p>
-        <button>add to cart</button>
+        <PhonePrice price={this.props.price} />
+        <AddPhone />
       </section>
     );
   }

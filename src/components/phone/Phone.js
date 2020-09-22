@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from '../../assets/product_image_placeholder.png';
-import PhoneFooter from '../PhoneFooter';
+import PhoneFooter from './PhoneFooter';
 
 class Phone extends React.Component {
   constructor(props) {
