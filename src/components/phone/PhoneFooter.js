@@ -13,12 +13,13 @@ class PhoneFooter extends React.Component {
     return (
       <section className="phone-footer">
         <PhonePrice price={this.props.price} />
-        <AddPhone />
+        <AddPhone buy={this.props.buy} />
       </section>
     );
   }
 }
 PhoneFooter.propTypes = {
   price: PropTypes.number,
+  buy: PropTypes.func,
 };
 export default PhoneFooter;

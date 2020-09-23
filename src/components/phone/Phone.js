@@ -14,7 +14,7 @@ class Phone extends React.Component {
       <section>
         <h3 className="model">{this.props.id}</h3>
         <img className="image-size" alt="product_image" src={Image}></img>
-        <PhoneFooter price={this.props.price} />
+        <PhoneFooter price={this.props.price} buy={this.props.buy} />
       </section>
     );
   }
@@ -22,5 +22,6 @@ class Phone extends React.Component {
 Phone.propTypes = {
   id: PropTypes.string,
   price: PropTypes.number,
+  buy: PropTypes.func,
 };
 export default Phone;

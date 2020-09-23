@@ -23,9 +23,11 @@ $base-margin: 20px;
   height: 150px;
 }
 
-.header {
+section.header {
   padding: 20px;
   background-color: $support-blue;
+  display: flex;
+  justify-content: space-between;
 }
 
 .iphone-part, .huawei-part {
