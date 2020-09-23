@@ -12,6 +12,6 @@ class PhonePrice extends React.Component {
   }
 }
 PhonePrice.propTypes = {
-  price: PropTypes.number,
+  price: PropTypes.string,
 };
 export default PhonePrice;

@@ -2,14 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Phone from '../phone/Phone';
 
+const url = 'http://localhost:3000/products';
 class HuaWeiPart extends React.Component {
   constructor(props) {
     super(props);
-    this.phoneModel = [
-      { model: 'HUAWEI P40 Pro+', price: 7999 },
-      { model: 'HUAWEI Mate 30', price: 5000 },
-      { model: 'HUAWEI nova 7', price: 4000 },
-    ];
+    this.state = {
+      phoneModel: [{ category: '', price: '', name: '' }],
+    };
+  }
+
+  componentDidMount() {
+    fetch(url)
+      .then((result) => result.json())
+      .then((json) => {
+        const result = json.filter((item) => item.category === 'HUAWEI');
+        this.setState({
+          phoneModel: result,
+        });
+      });
   }
 
   render() {
@@ -17,10 +27,10 @@ class HuaWeiPart extends React.Component {
       <section className="huawei-part">
         <h2>HUAWEI</h2>
         <article>
-          {this.phoneModel.map((phone) => (
+          {this.state.phoneModel.map((phone) => (
             <Phone
-              id={phone.model}
-              key={phone.model}
+              id={phone.name}
+              key={phone.name}
               price={phone.price}
               buy={this.props.buy}
             />

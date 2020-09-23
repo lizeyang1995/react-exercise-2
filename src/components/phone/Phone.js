@@ -21,7 +21,7 @@ class Phone extends React.Component {
 }
 Phone.propTypes = {
   id: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   buy: PropTypes.func,
 };
 export default Phone;

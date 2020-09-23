@@ -19,7 +19,7 @@ class PhoneFooter extends React.Component {
   }
 }
 PhoneFooter.propTypes = {
-  price: PropTypes.number,
+  price: PropTypes.string,
   buy: PropTypes.func,
 };
 export default PhoneFooter;
